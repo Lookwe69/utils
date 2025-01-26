@@ -36,6 +36,7 @@
 	},
 	"files": [
 		"index.js",
+		"index.d.ts",
 		"internal"
 	],
 	"main": "index.js",
