@@ -1,6 +1,6 @@
 module.exports = {
 	/* https://github.com/prettier/prettier/issues/12807 */
-	plugins: ['prettier-plugin-css-order', '@homer0/prettier-plugin-jsdoc', '@ianvs/prettier-plugin-sort-imports'],
+	plugins: ['@homer0/prettier-plugin-jsdoc', '@ianvs/prettier-plugin-sort-imports'],
 	semi: true,
 	singleQuote: true,
 	trailingComma: 'all',
