@@ -1,6 +1,6 @@
 import { expect } from '@open-wc/testing';
 
-import { nextMacrotask, nextMicrotask } from './event-loop';
+import { nextMacrotask, nextMicrotask } from './event-loop.js';
 
 describe('eventLoop', () => {
 	it('nextMicrotask', async () => {
