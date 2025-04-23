@@ -2,5 +2,11 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": ["config:recommended", "group:allNonMajor", ":semanticCommits", ":semanticCommitTypeAll(build)"],
 	"prConcurrentLimit": 5,
-	"labels": ["Renovate"]
+	"labels": ["Renovate"],
+	"packageRules": [
+		{
+			"matchDatasources": ["npm"],
+			"rangeStrategy": "bump"
+		}
+	]
 }
