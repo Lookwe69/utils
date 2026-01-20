@@ -5,6 +5,10 @@
 	"bugs": {
 		"url": "https://github.com/Lookwe69/utils/issues"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Lookwe69/utils.git"
+	},
 	"keywords": [
 		"lui utils",
 		"web-components utils",
