@@ -16,8 +16,7 @@ export type ArrayOneOrMore<T> = [T, ...Array<T>];
  *
  * type Bar = WithRequired<Foo, 'a'>; // { a: number; b?: string }
  */
-export type WithRequired<T, RequiredKeys extends keyof T> = Omit<T, RequiredKeys> &
-	Required<Pick<T, RequiredKeys>>;
+export type WithRequired<T, RequiredKeys extends keyof T> = Omit<T, RequiredKeys> & Required<Pick<T, RequiredKeys>>;
 
 /**
  * Makes the given keys of `T` optional.
@@ -33,8 +32,7 @@ export type WithRequired<T, RequiredKeys extends keyof T> = Omit<T, RequiredKeys
  *
  * type Bar = WithPartial<Foo, 'a'>; // { a?: number; b: string }
  */
-export type WithPartial<T, PartialKeys extends keyof T> = Omit<T, PartialKeys> &
-	Partial<Pick<T, PartialKeys>>;
+export type WithPartial<T, PartialKeys extends keyof T> = Omit<T, PartialKeys> & Partial<Pick<T, PartialKeys>>;
 
 /**
  * The base class for a mixin with an optional expected base class type.
