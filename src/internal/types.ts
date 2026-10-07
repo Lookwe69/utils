@@ -3,6 +3,40 @@ export type MaybePromise<T> = Promise<T> | T;
 export type ArrayOneOrMore<T> = [T, ...Array<T>];
 
 /**
+ * Makes the given keys of `T` required.
+ *
+ * @template T          The object type to modify.
+ * @template RequiredKeys  The keys of `T` to make required.
+ * @example
+ *
+ * interface Foo {
+ * 	a?: number;
+ * 	b?: string;
+ * }
+ *
+ * type Bar = WithRequired<Foo, 'a'>; // { a: number; b?: string }
+ */
+export type WithRequired<T, RequiredKeys extends keyof T> = Omit<T, RequiredKeys> &
+	Required<Pick<T, RequiredKeys>>;
+
+/**
+ * Makes the given keys of `T` optional.
+ *
+ * @template T          The object type to modify.
+ * @template PartialKeys  The keys of `T` to make optional.
+ * @example
+ *
+ * interface Foo {
+ * 	a: number;
+ * 	b: string;
+ * }
+ *
+ * type Bar = WithPartial<Foo, 'a'>; // { a?: number; b: string }
+ */
+export type WithPartial<T, PartialKeys extends keyof T> = Omit<T, PartialKeys> &
+	Partial<Pick<T, PartialKeys>>;
+
+/**
  * The base class for a mixin with an optional expected base class type.
  *
  * @template ExpectedBase  Optional expected base class type, such as `LitElement`.
