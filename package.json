@@ -76,8 +76,9 @@
 		"rollup": "^4.64.2",
 		"rollup-plugin-multi-input": "^1.9.0",
 		"semantic-release": "^25.0.9",
+		"tslib": "^2.8.1",
 		"typescript": "npm:@typescript/typescript6@^6.0.2",
-		"typescript-v7": "npm:typescript@^7.0.2",
-		"typescript-eslint": "^8.71.1"
+		"typescript-eslint": "^8.71.1",
+		"typescript-v7": "npm:typescript@^7.0.2"
 	}
 }
